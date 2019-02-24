@@ -159,6 +159,7 @@ body {
   height: 100%;
   content: " ";
   z-index: 1;
+  max-height: 111px;
 }
 @media (max-width: 800px) {
   .mywork .bg-left {
@@ -170,12 +171,26 @@ body {
   font-size: 2em;
   text-align: center;
 }
-.mywork .container {
+.mywork .credits-container {
   display: flex;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .mywork .credits-container {
+    display: block;
+  }
 }
 .mywork .column {
+  width: 50%;
   z-index: 2;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 800px) {
+  .mywork .column {
+    width: 100%;
+  }
 }
 .mywork .column .header {
   padding: 30px;
@@ -184,7 +199,35 @@ body {
   background: #E39C50;
   -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 90% 100%, 100% 0);
           clip-path: polygon(0 0, 0 100%, 100% 100%, 90% 100%, 100% 0);
+  margin-right: -75px;
 }
+@media (max-width: 800px) {
+  .mywork .showcase .header {
+    margin-right: 0;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+.mywork .posters {
+  display: flex;
+  flex-direction: column;
+}
+.mywork .posters .line {
+  display: flex;
+  flex-grow: 1;
+}
+.mywork .posters .cover {
+  flex-grow: 1;
+  width: 16.6%;
+}
+.mywork .posters .cover img {
+  width: 100%;
+}
+.mywork .content {
+  position: relative;
+  flex-grow: 1;
+}
+
 .work-showcase {
   position: relative;
   display: flex;
@@ -205,4 +248,22 @@ body {
 
 h1, h2, h3 {
   font-family: "Londrina Solid", cursive;
+}
+
+.footer {
+  background: #413A2E;
+  text-align: right;
+  color: #fff;
+  padding: 25px;
+}
+.footer h4 {
+  margin: 0;
+}
+
+.voicereel a {
+  background: #6EB1DC;
+  display: block;
+  text-align: center;
+  padding: 25px;
+  color: #fff;
 }
